@@ -1,3 +1,47 @@
 .modal {
     background: #c6d0ff7a;
 }
+
+ /* Ogólne ustawienia dla formularza */
+ .form-control {
+    width: 100%;  /* Zapewnia pełną szerokość dla każdego z pól */
+}
+
+/* Wersja mobilna - dla ekranów poniżej 768px */
+@media (max-width: 767px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-12 {
+        margin-bottom: 10px; /* Zapewnia przestrzeń między polami */
+    }
+
+    .col-md-4,
+    .col-md-8 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Ustawienia dla pola "Ulica" w wersji mobilnej */
+    .form-label {
+        margin-bottom: 5px;
+    }
+}
+
+/* Wersja desktopowa - dla ekranów od 768px */
+@media (min-width: 768px) {
+    .col-md-4 {
+        padding-right: 15px; /* Przestrzeń po prawej stronie pola "Kod pocztowy" */
+    }
+
+    .col-md-8 {
+        padding-left: 15px; /* Przestrzeń po lewej stronie pola "Miasto" */
+    }
+
+    /* Wyrównanie pola "Ulica" na większych ekranach */
+    .mb-3 input {
+        margin-bottom: 10px; /* Dodatkowa przestrzeń poniżej każdego z pól */
+    }
+}
